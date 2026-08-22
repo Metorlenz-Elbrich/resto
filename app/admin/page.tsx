@@ -18,13 +18,23 @@ export default function AdminPage() {
             <span className="badge-count">{recipes.length}</span>
           </h1>
         </div>
-        <div style={{ display: 'flex', gap: '1rem' }}>
-          <a className="top-link" href="/api/admin/export?filter=validated">
-            📖 Exporter (validées)
-          </a>
-          <a className="top-link" href="/api/admin/export?filter=all">
-            📚 Exporter (toutes)
-          </a>
+        <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap', alignItems: 'center' }}>
+          <div style={{ display: 'flex', gap: '1rem' }}>
+            <a className="top-link" href="/api/admin/export?filter=validated">
+              📖 PDF (validées)
+            </a>
+            <a className="top-link" href="/api/admin/export?filter=all">
+              📚 PDF (toutes)
+            </a>
+          </div>
+          <div style={{ display: 'flex', gap: '1rem', borderLeft: '1px solid var(--line, #e4dbc9)', paddingLeft: '1.5rem' }}>
+            <a className="top-link" href="/api/admin/export/csv?filter=validated">
+              📊 CSV (validées)
+            </a>
+            <a className="top-link" href="/api/admin/export/csv?filter=all">
+              📊 CSV (toutes)
+            </a>
+          </div>
         </div>
       </div>
       <AdminRecipeList recipes={recipes} />
