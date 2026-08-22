@@ -19,10 +19,10 @@ export default function AdminPage() {
           </h1>
         </div>
         <div style={{ display: 'flex', gap: '1rem' }}>
-          <a className="top-link" href="/api/admin/export?filter=validated" target="_blank" rel="noreferrer">
+          <a className="top-link" href="/api/admin/export?filter=validated">
             📖 Exporter (validées)
           </a>
-          <a className="top-link" href="/api/admin/export?filter=all" target="_blank" rel="noreferrer">
+          <a className="top-link" href="/api/admin/export?filter=all">
             📚 Exporter (toutes)
           </a>
         </div>
